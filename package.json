@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "blocknote",
   "private": true,
   "workspaces": [
     "packages/*",
