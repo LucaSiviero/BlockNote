@@ -182,7 +182,6 @@ export const createResizeHandlesWrapper = (
   // Wrapper element for rendered element and resize handles.
   const wrapper = document.createElement("div");
   wrapper.className = "bn-visual-media-wrapper";
-
   // Resize handle elements.
   const leftResizeHandle = document.createElement("div");
   leftResizeHandle.className = "bn-visual-media-resize-handle";
@@ -203,6 +202,8 @@ export const createResizeHandlesWrapper = (
 
   // Updates the element width with an updated width depending on the cursor X
   // offset from when the resize began, and which resize handle is being used.
+ 
+  // MARIO TOUCH SCREEN
   const windowMouseMoveHandler = (event: MouseEvent) => {
     if (!resizeParams) {
       if (

@@ -61,13 +61,17 @@ export const FilePanel = <
   );
 
   return (
-    <Components.FilePanel.Root
+    
+ <Components.FilePanel.Root
       className={"bn-panel"}
       defaultOpenTab={openTab}
       openTab={openTab}
       setOpenTab={setOpenTab}
       tabs={tabs}
       loading={loading}
-    />
+    /> 
   );
 };
+    {/* <div style={{border:"5px", backgroundColor:"red"}} >
+      Hello
+    </div> */}

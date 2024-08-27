@@ -447,14 +447,18 @@
   position: absolute;
 }
 
-/* Image Panel styling*/
+/* Responsive Image Panel styling */
 .bn-mantine .bn-panel {
   background-color: var(--bn-colors-menu-background);
   border: var(--bn-border);
   border-radius: var(--bn-border-radius-medium);
   box-shadow: var(--bn-shadow-medium);
   padding: 2px;
-  width: 500px;
+  width: 100%; /* Porta la larghezza al 100% su dispositivi più piccoli */
+  max-width: 500px; /* Limita la larghezza massima a 500px */
+  box-sizing: border-box; /* Assicura che padding e bordo siano inclusi nelle dimensioni */
+  position: relative; /* Assicura che il posizionamento sia relativo */
+  margin: auto; /* Centra il pannello */
 }
 
 .bn-mantine .bn-panel .bn-tab-panel {
@@ -476,7 +480,10 @@
   border-radius: var(--bn-border-radius-small);
   color: var(--bn-colors-menu-text);
   height: 32px;
-  width: 60%;
+  width: 100%; /* Assicura che il bottone prenda tutta la larghezza disponibile */
+  max-width: 250px; /* Limita la larghezza massima */
+  box-sizing: border-box;
+  margin: 0 auto; /* Centra i bottoni */
 }
 
 .bn-panel .mantine-Button-root:hover {
@@ -485,6 +492,40 @@
 
 .bn-panel .mantine-Text-root {
   text-align: center;
+}
+
+/* Media Queries per Responsive Design */
+
+/* Per dispositivi con larghezza inferiore a 600px */
+@media (max-width: 600px) {
+  .bn-mantine .bn-panel {
+    width: 95%; /* Riduci la larghezza su schermi più piccoli */
+    max-width: 100%; /* Rimuovi il limite massimo */
+    left: 0; /* Assicura che il pannello sia centrato */
+    right: 0; /* Assicura che il pannello sia centrato */
+    top: 10px; /* Aggiungi un po' di spazio sopra */
+    margin: auto;
+  }
+
+  .bn-panel .mantine-Button-root {
+    width: 100%; /* Estendi i bottoni alla larghezza totale */
+  }
+
+  .bn-mantine .bn-panel .bn-tab-panel {
+    gap: 5px; /* Riduci lo spazio tra gli elementi */
+  }
+}
+
+/* Per dispositivi con larghezza inferiore a 400px */
+@media (max-width: 400px) {
+  .bn-mantine .bn-panel {
+    padding: 5px; /* Riduci il padding per guadagnare spazio */
+    top: 5px;
+  }
+
+  .bn-mantine .bn-panel .bn-tab-panel {
+    gap: 4px;
+  }
 }
 
 /* Table Handle styling */

@@ -36,6 +36,8 @@ const icons = {
   audio: RiVolumeUpFill,
   file: RiFile2Line,
   emoji: RiEmotionFill,
+  html: RiImage2Fill,
+
 };
 
 export function getDefaultReactSlashMenuItems<

@@ -1,5 +1,14 @@
 export const en = {
   slash_menu: {
+    html: {
+      title: "html",
+      subtext: "HTML",
+      aliases: [
+        "Embed",
+        "Html",
+      ],
+      group: "Media",
+    },
     heading: {
       title: "Heading 1",
       subtext: "Top-level heading",
@@ -30,6 +39,7 @@ export const en = {
       aliases: ["ul", "li", "list", "bulletlist", "bullet list"],
       group: "Basic blocks",
     },
+    
     check_list: {
       title: "Check List",
       subtext: "List with checkboxes",
@@ -131,6 +141,9 @@ export const en = {
     file: {
       add_button_text: "Add file",
     },
+    html: {
+      add_button_text: "Embed HTML",
+    }
   },
   // from react package:
   side_menu: {
@@ -208,6 +221,7 @@ export const en = {
         video: "Replace video",
         audio: "Replace audio",
         file: "Replace file",
+        html: "Replace HTML"
       } as Record<string, string>,
     },
     file_rename: {
@@ -216,12 +230,14 @@ export const en = {
         video: "Rename video",
         audio: "Rename audio",
         file: "Rename file",
+        html: "Rename HTML"
       } as Record<string, string>,
       input_placeholder: {
         image: "Rename image",
         video: "Rename video",
         audio: "Rename audio",
         file: "Rename file",
+        html: "Rename HTML"
       } as Record<string, string>,
     },
     file_download: {
@@ -230,6 +246,8 @@ export const en = {
         video: "Download video",
         audio: "Download audio",
         file: "Download file",
+        html: "Download HTML"
+
       } as Record<string, string>,
     },
     file_delete: {
@@ -238,6 +256,7 @@ export const en = {
         video: "Delete video",
         audio: "Delete audio",
         file: "Delete file",
+        html: "Delete html",
       } as Record<string, string>,
     },
     file_preview_toggle: {
@@ -282,6 +301,7 @@ export const en = {
         video: "Embed video",
         audio: "Embed audio",
         file: "Embed file",
+        html: "Embed html"
       } as Record<string, string>,
       url_placeholder: "Enter URL",
     },

@@ -71,6 +71,7 @@ export default function App() {
     <BlockNoteView editor={editor} formattingToolbar={false}>
       <FormattingToolbarController
         formattingToolbar={() => (
+          <div className="border border-red-500">
           <FormattingToolbar>
             <BlockTypeSelect key={"blockTypeSelect"} />
 
@@ -122,6 +123,7 @@ export default function App() {
 
             <CreateLinkButton key={"createLinkButton"} />
           </FormattingToolbar>
+          </div>
         )}
       />
     </BlockNoteView>

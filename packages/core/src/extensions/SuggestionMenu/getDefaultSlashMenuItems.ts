@@ -46,6 +46,7 @@ export function insertOrUpdateBlock<
   block: PartialBlock<BSchema, I, S>
 ): Block<BSchema, I, S> {
   const currentBlock = editor.getTextCursorPosition().block;
+  console.log("o");
 
   if (currentBlock.content === undefined) {
     throw new Error("Slash Menu open in a block that doesn't contain content.");
@@ -211,6 +212,27 @@ export function getDefaultSlashMenuItems<
       },
       key: "image",
       ...editor.dictionary.slash_menu.image,
+    });
+  }
+
+  // MARIO
+  if (checkDefaultBlockTypeInSchema("html", editor)) {
+    items.push({
+       onItemClick: () => {
+        console.log("o");
+        const insertedBlock = insertOrUpdateBlock(editor, {
+          type: "html",
+        });
+
+        // Immediately open the file toolbar
+        editor.dispatch(
+          editor._tiptapEditor.state.tr.setMeta(editor.filePanel!.plugin, {
+            block: insertedBlock,
+          })
+        );
+      },
+      key: "html",
+      ...editor.dictionary.slash_menu.html, 
     });
   }
 
