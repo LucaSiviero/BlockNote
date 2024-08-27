@@ -1,10 +1,10 @@
 {
   "name": "@blocknote/shadcn",
-  "homepage": "https://github.com/TypeCellOS/BlockNote",
+  "homepage": "https://github.com/LucaSiviero/BlockNote",
   "private": false,
   "sideEffects": false,
   "license": "MPL-2.0",
-  "version": "0.15.5",
+  "version": "0.15.6",
   "files": [
     "dist",
     "types",
